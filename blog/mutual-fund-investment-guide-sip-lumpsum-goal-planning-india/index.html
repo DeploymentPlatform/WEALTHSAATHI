@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Mutual Fund Investment Guide India | SIP, Lumpsum & Goals | Wealth Saathi</title>
+    <meta name="description" content="Learn how SIP, lumpsum investing, asset allocation, ELSS, retirement planning and portfolio reviews work. Wealth Saathi helps investors plan with risk awareness." />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logo: {
+                            pink: '#e94b83',
+                            orange: '#ff8a4c',
+                            yellow: '#ffd54f',
+                            green: '#81c784',
+                            blue: '#4ea8de',
+                        },
+                        teal: { 50: '#f0fdfa', 100: '#ccfbf1', 200: '#99f6e4', 300: '#5eead4', 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488', 700: '#0f766e', 800: '#115e59', 900: '#134e4a', 950: '#042f2e' },
+                        fire: { 50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74', 400: '#fb923c', 500: '#f97316', 600: '#ea580c', 700: '#c2410c', 800: '#9a3412', 900: '#7c2d12' },
+                    },
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ── BASE ─────────────────────────────────────────────────────── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #fafaf8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* ── SCROLLBAR ────────────────────────────────────────────────── */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f2b2b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #4ea8de, #81c784);
+            border-radius: 99px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ff8a4c, #e94b83);
+        }
+
+        /* ── NOISE TEXTURE ────────────────────────────────────────────── */
+        .noise-overlay::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.35;
+        }
+
+        /* ── FLOAT ────────────────────────────────────────────────────── */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float 6s ease-in-out 2s infinite;
+        }
+
+        .card-lift {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+        }
+
+        .card-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #e94b83, #ff8a4c, #ffd54f, #81c784, #4ea8de, #e94b83);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 5s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+    </style>
+</head>
+
+<body class="noise-overlay">
+
+    <!-- ==================== NEW TOP NAVIGATION ==================== -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="../../index.html" class="flex items-center gap-3">
+                <img src="https://drive.google.com/thumbnail?id=1MTswliuL1pnjv-uhqbIuar86W0d5hvZM&sz=w600" 
+                     alt="Wealth Saathi Advisor" class="h-10 md:h-12 w-auto">
+            </a>
+
+            <!-- Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                <a href="../../index.html" class="hover:text-logo-blue transition-colors">Home</a>
+                <a href="../../about.html" class="hover:text-logo-blue transition-colors">About</a>
+                <a href="../../services.html" class="hover:text-logo-blue transition-colors">Services</a>
+                <a href="../../process.html" class="hover:text-logo-blue transition-colors">Process</a>
+                <a href="../../performance.html" class="hover:text-logo-blue transition-colors">Performance</a>
+                <a href="../../calculators.html" class="hover:text-logo-blue transition-colors">Calculators</a>
+                <a href="../index.html" class="hover:text-logo-blue transition-colors text-logo-blue">Blog</a>
+                <a href="../../contact.html" class="hover:text-logo-blue transition-colors">Contact</a>
+            </div>
+
+            <a href="../../contact.html" 
+               class="bg-teal-950 text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-teal-900 transition-all flex items-center gap-2">
+                Free Consultation
+            </a>
+
+            <!-- Mobile menu button -->
+            <button onclick="toggleMobile()" class="md:hidden text-3xl">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 text-sm font-semibold">
+            <a href="../../index.html" class="py-2">Home</a>
+            <a href="../../about.html" class="py-2">About</a>
+            <a href="../../services.html" class="py-2">Services</a>
+            <a href="../../process.html" class="py-2">Process</a>
+            <a href="../../performance.html" class="py-2">Performance</a>
+            <a href="../../calculators.html" class="py-2">Calculators</a>
+            <a href="../index.html" class="py-2 text-logo-blue">Blog</a>
+            <a href="../../contact.html" class="py-2">Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMobile() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Mutual Fund Investment Guide India | SIP, Lumpsum & Goals | Wealth Saathi</title>
+    <meta name="description" content="Learn how SIP, lumpsum investing, asset allocation, ELSS, retirement planning and portfolio reviews work. Wealth Saathi helps investors plan with risk awareness." />
+    <link rel="canonical" href="https://wealthsaathi.co.in/blog/mutual-fund-investment-guide-sip-lumpsum-goal-planning-india" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logo: { pink: '#e94b83', orange: '#ff8a4c', yellow: '#ffd54f', green: '#81c784', blue: '#4ea8de' },
+                        teal: { 50: '#f0fdfa', 100: '#ccfbf1', 200: '#99f6e4', 300: '#5eead4', 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488', 700: '#0f766e', 800: '#115e59', 900: '#134e4a', 950: '#042f2e' },
+                    },
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- SEO Schemas JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mutual Fund Investment Guide in India: SIP, Lumpsum, Goal Planning and Portfolio Review",
+      "description": "A beginner-friendly guide to mutual fund planning, SIP, lumpsum investing, asset allocation, risk profiling, ELSS and portfolio review in India.",
+      "author": {
+        "@type": "Person",
+        "name": "T. Sreenivasula Gupta"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wealth Saathi Advisor",
+        "url": "https://wealthsaathi.co.in/"
+      },
+      "mainEntityOfPage": "https://wealthsaathi.co.in/blog/mutual-fund-investment-guide-sip-lumpsum-goal-planning-india"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is SIP safe for beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SIP is a disciplined way to invest regularly, but it is not risk-free. The risk depends on the mutual fund scheme category, market conditions and investment horizon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is better: SIP or lumpsum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SIP is suitable for regular monthly investing. Lumpsum may be suitable for surplus money with a long time horizon and proper asset allocation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can mutual funds give guaranteed returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Mutual fund returns are market-linked and not guaranteed. Investors should read all scheme-related documents carefully before investing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many mutual funds should I hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no one fixed number. The portfolio should have enough diversification without unnecessary overlap. The right number depends on goals, investment amount, categories and risk profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I review my portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mutual fund portfolio can usually be reviewed periodically, such as once or twice a year, or when there is a major change in goal, income, risk profile or market environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ELSS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ELSS is an equity-linked tax-saving mutual fund category used under Section 80C, subject to applicable tax rules. It carries market risk and has a lock-in period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an AMFI registered mutual fund distributor do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AMFI registered mutual fund distributor helps investors with mutual fund transactions and distribution-related support. Investors should still understand scheme risks, suitability and disclosures before investing."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ── BASE ── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; background: #fafaf8; color: #1a1a1a; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
+
+        /* ── BACKGROUND NOISE ── */
+        .noise-overlay::before {
+            content: ''; position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none; z-index: 9999; opacity: 0.35;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
+
+        .card-lift { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease; }
+        .card-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); }
+        .section-dark { background: linear-gradient(135deg, #042f2e 0%, #0f2b2b 40%, #061c1c 100%); }
+        .gradient-text-blue { background: linear-gradient(135deg, #4ea8de, #81c784); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        input[type=range] { appearance: none; -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #2dd4bf; cursor: pointer; margin-top: -8px; box-shadow: 0 0 10px rgba(45,212,191,0.5); }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+        .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; font-size: 1.05rem; }
+        .prose h2 { font-size: 2.25rem; font-weight: 700; color: #042f2e; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 100px; border-bottom: 1px solid #f3f4f6; padding-bottom: 0.5rem; }
+        .prose h3 { font-size: 1.5rem; font-weight: 700; color: #042f2e; margin-top: 2rem; margin-bottom: 1rem; scroll-margin-top: 100px; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1.5rem; space-y: 0.5rem; }
+        .prose li { list-style-type: disc; margin-bottom: 0.5rem; line-height: 1.7; color: #374151; }
+    </style>
+</head>
+
+<body class="noise-overlay bg-[#fafaf8]">
+
+    <!-- ============================================================
+    HERO SECTION
+    ============================================================ -->
+    <section class="relative min-h-[50vh] section-dark overflow-hidden flex items-center pt-24 pb-16">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-teal-900/40 via-transparent to-transparent"></div>
+        
+        <div class="absolute top-1/4 left-10 w-64 h-64 bg-logo-pink/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-logo-blue/10 rounded-full blur-3xl animate-float-delayed"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div data-aos="fade-down" class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 text-logo-yellow text-sm font-mono tracking-widest uppercase mb-8 shadow-lg backdrop-blur-md">
+                <i data-lucide="award" class="w-4 h-4"></i> Featured Guide
+            </div>
+            
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8" data-aos="fade-up" data-aos-delay="100">
+                Mutual Fund Investment Guide in India: SIP, Lumpsum, Goal Planning and Portfolio Review
+            </h1>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/70 font-mono" data-aos="fade-up" data-aos-delay="200">
+                <span class="bg-teal-900/60 text-logo-green border border-teal-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    Mutual Funds
+                </span>
+                <span>•</span>
+                <span>Published: June 30, 2026</span>
+                <span>•</span>
+                <span>10 to 12 min read</span>
+                <span>•</span>
+                <span class="text-white font-semibold">Wealth Saathi Advisor</span>
+            </div>
+        </div>
+        
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            class="absolute bottom-0 w-full h-16 md:h-24">
+            <path d="M0,120 L1440,120 L1440,40 C1080,100 720,0 360,60 C120,80 0,60 0,60 L0,120Z" fill="#fafaf8" />
+        </svg>
+    </section>
+
+    <!-- ============================================================
+    ARTICLE CONTENT
+    ============================================================ -->
+    <section class="py-12 md:py-20 relative bg-[#fafaf8]">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
+            
+            <!-- Sidebar (TOC + Quick Advisory Contact) -->
+            <aside class="lg:col-span-4 lg:sticky lg:top-28 h-fit space-y-8 order-2 lg:order-1">
+                
+                <!-- Table of Contents -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.02)]">
+                    <h4 class="font-display text-2xl font-bold text-teal-950 mb-6 border-b pb-3 border-gray-100 flex items-center gap-2">
+                        <i data-lucide="list" class="w-5 h-5 text-teal-900"></i> Table of Contents
+                    </h4>
+                    <nav class="space-y-3 text-sm">
+                        <a href="#why-strategy" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Why Mutual Fund Investing Needs a Strategy
+                        </a>
+                        <a href="#what-is-mf" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            What Is a Mutual Fund?
+                        </a>
+                        <a href="#sip-vs-lumpsum" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            SIP vs Lumpsum: Which Method?
+                        </a>
+                        <a href="#power-compounding" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            The Power of Compounding
+                        </a>
+                        <a href="#asset-allocation" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Asset Allocation
+                        </a>
+                        <a href="#risk-profiling" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Risk Profiling & SEBI Riskometer
+                        </a>
+                        <a href="#goal-based" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Goal-Based SIP Planning
+                        </a>
+                        <a href="#portfolio-restructuring" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Portfolio Restructuring
+                        </a>
+                        <a href="#retirement-planning" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Retirement Planning with Mutual Funds
+                        </a>
+                        <a href="#elss-tax" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            ELSS Tax Saving (80C)
+                        </a>
+                        <a href="#how-ws-helps" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            How Wealth Saathi Helps
+                        </a>
+                        <a href="#common-mistakes" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Common Mutual Fund Mistakes
+                        </a>
+                        <a href="#final-checklist" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Final Checklist
+                        </a>
+                        <a href="#faqs" class="block text-gray-500 hover:text-logo-blue transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-logo-blue">
+                            Frequently Asked Questions
+                        </a>
+                    </nav>
+                </div>
+                
+                <!-- Quick Contact Card -->
+                <div class="bg-teal-950 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-teal-900/30 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <span class="text-logo-yellow font-mono text-xs uppercase tracking-widest block mb-2">AMFI Registered Distributor</span>
+                        <h4 class="font-display text-2xl font-bold mb-4">Start Planning with Wealth Saathi</h4>
+                        <p class="text-white/60 text-sm leading-relaxed mb-6">
+                            Let T. Sreenivasula Gupta (AMFI ARN: 290997) help you restructure your portfolio, plan your retirement, or set up goal-based SIPs.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <a href="tel:+918125293199" class="flex items-center gap-3 text-sm hover:text-logo-blue transition-colors font-mono">
+                                <i data-lucide="phone" class="w-4 h-4 text-logo-green"></i> +91 81252 93199
+                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=918125293199" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm hover:text-logo-green transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-logo-green"></i> WhatsApp Connect
+                            </a>
+                        </div>
+                        
+                        <a href="../../contact.html" class="block text-center bg-white text-teal-950 hover:bg-logo-blue hover:text-white font-bold py-3 rounded-full text-sm transition-all shadow-md">
+                            Book Free Consultation
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+            
+            <!-- Article Body -->
+            <article class="lg:col-span-8 order-1 lg:order-2 prose max-w-none">
+                
+                <!-- Featured Image -->
+                <div class="mb-12 rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop&q=90" 
+                         alt="Mutual fund investment planning with Wealth Saathi Advisor" 
+                         class="w-full h-auto object-cover" />
+                    <div class="p-6 bg-white flex items-center justify-between border-t text-xs text-gray-400 font-mono">
+                        <span>Featured Image: Professional Indian Financial Planning</span>
+                        <span>Alt: Mutual fund investment planning with Wealth Saathi Advisor</span>
+                    </div>
+                </div>
+
+                <!-- Author Bio Section -->
+                <div class="flex items-center gap-4 bg-teal-50/50 p-6 rounded-2xl border border-teal-100/50 mb-10">
+                    <div class="w-12 h-12 rounded-full bg-teal-900 text-white flex items-center justify-center font-display text-xl font-bold">
+                        SG
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-teal-950">T. Sreenivasula Gupta</div>
+                        <div class="text-xs text-gray-500">Founder & Chief Advisor, Wealth Saathi Advisor</div>
+                        <div class="text-xs text-gray-400 font-mono mt-0.5">AMFI ARN: 290997</div>
+                    </div>
+                </div>
+
+                <!-- Introduction -->
+                <p class="font-light text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                    Mutual fund investing looks simple from the outside. You choose a fund, start a SIP, wait for a few years and expect wealth to grow. But in real life, good investing is not only about selecting a fund name. It is about matching the right fund category, risk level, time horizon, asset allocation and goal with your actual financial life.
+                </p>
+
+                <p>
+                    This is where <strong>Wealth Saathi Advisor</strong> focuses on disciplined wealth planning. The idea is not to chase every market trend or react emotionally to every market fall. The idea is to create a clear investment strategy, review it regularly and stay aligned with long-term goals such as children education, home purchase, retirement, wealth creation, tax saving and family financial security.
+                </p>
+
+                <p>
+                    In this detailed <strong>mutual fund investment guide India</strong>, you will understand how SIP, lumpsum investing, step-up SIP, asset allocation, portfolio restructuring, ELSS tax saving and retirement planning work in India. You will also learn why market risk, Riskometer, scheme documents and investor suitability should always be considered before investing.
+                </p>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-8 rounded-r-xl text-sm text-yellow-800">
+                    <strong class="font-bold">Important note:</strong> This article is for investor education only. Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not a guarantee of future results.
+                </div>
+
+                <!-- SECTION 1 -->
+                <h2 id="why-strategy">Why Mutual Fund Investing Needs a Strategy, Not Guesswork</h2>
+                <p>
+                    Many investors start mutual funds because a friend suggested a fund, a video showed high past returns, or an app displayed a top-performing scheme. This approach may look easy, but it can create problems later. The best-performing fund of last year may not be suitable for your risk profile. A high-return equity fund may not be suitable for a short-term goal. A portfolio with too many funds may look diversified but may actually be overlapping.
+                </p>
+                <p>
+                    A proper mutual fund investment plan answers five important questions:
+                </p>
+                <ul>
+                    <li>What is the goal of this investment?</li>
+                    <li>How many years can the money stay invested?</li>
+                    <li>How much market risk can the investor emotionally and financially handle?</li>
+                    <li>What mix of equity, debt and liquid funds is suitable?</li>
+                    <li>How often should the portfolio be reviewed and rebalanced?</li>
+                </ul>
+                <p>
+                    Wealth Saathi can use a structured planning approach where the investor journey begins with discovery and risk profiling, followed by asset allocation, execution and periodic review. This makes the investment process more disciplined and less emotional.
+                </p>
+
+                <!-- SECTION 2 -->
+                <h2 id="what-is-mf">What Is a Mutual Fund? A Simple Explanation for Indian Investors</h2>
+                <p>
+                    A mutual fund pools money from many investors and invests that money in a portfolio of securities such as equity shares, debt instruments, money market instruments or a combination of these. The fund is managed according to the investment objective stated in its scheme documents.
+                </p>
+                <p>
+                    For example, an equity mutual fund mainly invests in shares of companies. A debt mutual fund mainly invests in debt instruments. A hybrid fund invests in a mix of equity and debt. An ELSS fund is an equity-oriented tax-saving mutual fund with a lock-in period as per current tax rules. Each category has a different risk level, return expectation and ideal holding period.
+                </p>
+                <p>
+                    The biggest advantage of mutual funds is that they allow investors to start with small amounts, access professional fund management and diversify across many securities. But mutual funds are not fixed deposits. Returns are market-linked and can move up or down depending on market conditions, interest rates, liquidity, credit quality and other factors.
+                </p>
+
+                <!-- SECTION 3 -->
+                <h2 id="sip-vs-lumpsum">SIP vs Lumpsum: Which Method Should You Choose?</h2>
+                <p>
+                    One of the most common questions investors ask is: Should I invest through SIP or lumpsum? The right answer depends on your income pattern, market comfort, time horizon and goal.
+                </p>
+                <p>
+                    A Systematic Investment Plan, commonly called SIP, allows you to invest a fixed amount at regular intervals. SIP is useful for salaried individuals and business owners who want to build wealth gradually. It brings discipline and reduces the pressure of timing the market. When markets fall, the same SIP amount can buy more units. When markets rise, the portfolio benefits from earlier accumulated units. This is known as rupee-cost averaging, though it does not remove market risk.
+                </p>
+                <p>
+                    A lumpsum investment means investing a larger amount at one time. Lumpsum may be suitable when the investor has surplus money, a long investment horizon and the ability to handle short-term volatility. However, if the market is very volatile or the investor is uncomfortable investing the full amount at once, a Systematic Transfer Plan, or STP, may be considered after evaluating suitability.
+                </p>
+                <p>
+                    <strong>Simple rule:</strong> SIP is usually better for regular monthly investing and emotional discipline. Lumpsum may work for long-term surplus deployment when risk profile and asset allocation are clear. In both cases, fund selection should be linked to goals and risk capacity, not only past returns.
+                </p>
+
+                <!-- SECTION 4 -->
+                <h2 id="power-compounding">The Power of Compounding: Why Time Matters More Than Timing</h2>
+                <p>
+                    Compounding is the process where returns earned on an investment can also start generating returns over time. The longer the money stays invested, the more powerful compounding can become. This is why starting early often matters more than waiting for the perfect market level.
+                </p>
+                <p>
+                    For example, an investor who starts a monthly SIP early and continues through market cycles may build a stronger long-term corpus than someone who waits for the perfect time and keeps delaying. The goal is not to predict every market movement. The goal is to stay invested in a suitable portfolio for a suitable period.
+                </p>
+
+                <!-- SIP CALCULATOR WIDGET -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg my-12" id="calculator">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-900">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-teal-950 m-0">Calculate Your SIP Journey</h3>
+                            <p class="text-xs text-gray-500 m-0">Interactive tool: Adjust inputs to see illustrative estimates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-6">
+                            <!-- Monthly Investment -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span class="text-gray-600 font-semibold">Monthly SIP Amount</span>
+                                    <span class="text-teal-900 font-bold font-mono">₹<span id="disp-sip">5,000</span></span>
+                                </div>
+                                <input type="range" id="calc-sip" min="500" max="100000" step="500" value="5000" class="w-full" />
+                            </div>
+
+                            <!-- Expected Annual Return -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span class="text-gray-600 font-semibold">Expected Annual Returns</span>
+                                    <span class="text-teal-900 font-bold font-mono"><span id="disp-rate">12</span>%</span>
+                                </div>
+                                <input type="range" id="calc-rate" min="5" max="20" step="0.5" value="12" class="w-full" />
+                            </div>
+
+                            <!-- Time Period -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <span class="text-gray-600 font-semibold">Time Period (Years)</span>
+                                    <span class="text-teal-900 font-bold font-mono"><span id="disp-time">10</span> Years</span>
+                                </div>
+                                <input type="range" id="calc-time" min="1" max="40" step="1" value="10" class="w-full" />
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="bg-teal-950/5 p-6 rounded-2xl flex flex-col justify-between border border-teal-950/10">
+                            <div class="space-y-4">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Invested Amount:</span>
+                                    <span class="font-bold text-teal-950 font-mono" id="calc-invested">₹6,00,000</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Estimated Gain:</span>
+                                    <span class="font-bold text-teal-950 font-mono" id="calc-returns">₹5,23,486</span>
+                                </div>
+                                <div class="border-t border-teal-950/10 pt-4 flex justify-between text-md font-bold">
+                                    <span class="text-teal-950">Total Estimated Corpus:</span>
+                                    <span class="text-teal-900 font-mono" id="calc-total">₹11,23,486</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 space-y-2">
+                                <div class="flex h-3 rounded-full overflow-hidden bg-gray-200">
+                                    <div id="bar-invested" class="bg-teal-900 transition-all" style="width: 53%;"></div>
+                                    <div id="bar-returns" class="bg-logo-blue transition-all" style="width: 47%;"></div>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-gray-400 font-mono">
+                                    <span>● Invested</span>
+                                    <span>● Gain</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-teal-50 border border-teal-100 rounded-xl p-4 flex items-start gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-teal-900 mt-0.5 flex-shrink-0"></i>
+                        <p class="text-xs text-teal-900/80 m-0 leading-relaxed">
+                            <strong>SIP calculator disclaimer:</strong> All calculator outputs or projections are illustrative and not guaranteed. Actual returns depend on market risk and the choice of mutual fund scheme.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SECTION 5 -->
+                <h2 id="asset-allocation">Asset Allocation: The Foundation of a Strong Mutual Fund Portfolio</h2>
+                <p>
+                    Asset allocation means dividing your investment across asset classes such as equity, debt and liquid instruments. It is one of the most important decisions in wealth planning because it controls the overall risk and stability of the portfolio.
+                </p>
+                <p>
+                    An aggressive investor with a 10-year goal may hold a higher equity allocation. A conservative investor with a 2-year goal may need a higher debt or liquid allocation. A retiree may need a different mix compared with a young professional. A business owner with irregular income may need a larger emergency reserve before increasing equity exposure.
+                </p>
+                <p>
+                    Good asset allocation helps investors avoid two common mistakes: taking too much risk for short-term goals and taking too little risk for long-term goals. It also supports diversification, so that the portfolio does not depend on only one fund category, one theme or one market cycle.
+                </p>
+                <p>
+                    <strong>Important:</strong> Diversification can reduce concentration risk, but it does not remove market risk. Every mutual fund scheme must be selected after understanding its investment objective, portfolio style, risk level and suitability.
+                </p>
+
+                <!-- SECTION 6 -->
+                <h2 id="risk-profiling">Risk Profiling and SEBI Riskometer: Know the Risk Before You Invest</h2>
+                <p>
+                    Before starting a mutual fund investment, every investor should understand risk. Risk is not only about market fall. It can include volatility risk, liquidity risk, credit risk, interest rate risk, concentration risk and behaviour risk.
+                </p>
+                <p>
+                    SEBI requires mutual fund schemes to display a Riskometer that shows the level of risk for a scheme. The risk level can range from low to very high, depending on the nature of the scheme and underlying portfolio. Investors should not ignore this. A scheme that is suitable for a 15-year wealth creation goal may not be suitable for money required in the next 12 months.
+                </p>
+                <p>
+                    Risk profiling helps answer whether an investor is conservative, moderate or aggressive. But risk profiling should not stop with a form. It should include real-life questions such as: How will you react if the portfolio falls 15 percent? Do you have emergency funds? Is your income stable? Is the investment goal flexible or fixed? Do you need liquidity soon?
+                </p>
+                <p>
+                    At Wealth Saathi, this risk-first approach can be used before fund selection. The investor should first understand the purpose of the investment, the time horizon and the possible volatility. Only then should scheme categories and investment amounts be finalised.
+                </p>
+
+                <!-- RISK AWARENESS CHECKBOX WIDGET -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md my-12" id="risk-widget">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-500">
+                            <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-teal-950 m-0">Before You Invest, Check Your Risk Comfort</h3>
+                            <p class="text-xs text-gray-500 m-0">Take a moment to review this risk-first checklist.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <label class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="mt-1 w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <div>
+                                <span class="text-sm font-semibold text-teal-950">Do I have emergency savings?</span>
+                                <p class="text-xs text-gray-500 mt-0.5">Ensure you have 6-12 months of expenses liquid before investing in volatile mutual funds.</p>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="mt-1 w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <div>
+                                <span class="text-sm font-semibold text-teal-950">Can I stay invested through market volatility?</span>
+                                <p class="text-xs text-gray-500 mt-0.5">Markets can go down. You must be emotionally prepared to not panic-sell during cycles.</p>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="mt-1 w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <div>
+                                <span class="text-sm font-semibold text-teal-950">Is my goal short-term or long-term?</span>
+                                <p class="text-xs text-gray-500 mt-0.5">Long-term goals can hold equity. Short-term goals require low-volatility fixed income assets.</p>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="mt-1 w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <div>
+                                <span class="text-sm font-semibold text-teal-950">Have I checked the scheme Riskometer?</span>
+                                <p class="text-xs text-gray-500 mt-0.5">Every scheme displays its Riskometer. Ensure it matches your emotional risk score.</p>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="mt-1 w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <div>
+                                <span class="text-sm font-semibold text-teal-950">Have I read the scheme-related documents?</span>
+                                <p class="text-xs text-gray-500 mt-0.5">SEBI mandates reading the SID/KIM to understand charges, loads, and portfolio mandates.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SECTION 7 -->
+                <h2 id="goal-based">Goal-Based SIP Planning: Invest for Real Life, Not Random Returns</h2>
+                <p>
+                    A mutual fund portfolio becomes more meaningful when each investment is connected to a goal. Random investing creates confusion because the investor does not know when to review, when to switch, when to reduce risk or when to stop.
+                </p>
+                <p>
+                    Goal-based SIP planning connects investments to real-life outcomes such as:
+                </p>
+                <ul>
+                    <li>Child education planning</li>
+                    <li>Home purchase planning</li>
+                    <li>Retirement corpus creation</li>
+                    <li>Tax saving through ELSS</li>
+                    <li>Emergency reserve and short-term parking</li>
+                    <li>Long-term wealth creation</li>
+                </ul>
+                <p>
+                    Each goal needs a target amount, time horizon and suitable asset allocation. For example, a child education goal that is 12 years away may have a different fund mix compared with a home down payment needed in 2 years. Long-term goals can usually tolerate more equity volatility, while short-term goals need more stability.
+                </p>
+
+                <!-- GOAL PLANNER WIDGET -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md my-12" id="goal-planner">
+                    <h3 class="font-display text-2xl font-bold text-teal-950 mb-3">Interactive Goal Planner</h3>
+                    <p class="text-xs text-gray-500 mb-6">Select a financial goal to see how Wealth Saathi builds a strategy for it.</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+                        <button onclick="selectGoal('edu')" id="btn-goal-edu" class="px-3 py-3 rounded-2xl border border-teal-900 bg-teal-900 text-white text-xs font-semibold text-center transition-all select-none">
+                            Child Education
+                        </button>
+                        <button onclick="selectGoal('ret')" id="btn-goal-ret" class="px-3 py-3 rounded-2xl border border-gray-200 bg-white text-gray-600 hover:border-teal-900 text-xs font-semibold text-center transition-all select-none">
+                            Retirement
+                        </button>
+                        <button onclick="selectGoal('home')" id="btn-goal-home" class="px-3 py-3 rounded-2xl border border-gray-200 bg-white text-gray-600 hover:border-teal-900 text-xs font-semibold text-center transition-all select-none">
+                            Home Purchase
+                        </button>
+                        <button onclick="selectGoal('tax')" id="btn-goal-tax" class="px-3 py-3 rounded-2xl border border-gray-200 bg-white text-gray-600 hover:border-teal-900 text-xs font-semibold text-center transition-all select-none">
+                            Tax Saving
+                        </button>
+                        <button onclick="selectGoal('wealth')" id="btn-goal-wealth" class="px-3 py-3 rounded-2xl border border-gray-200 bg-white text-gray-600 hover:border-teal-900 text-xs font-semibold text-center transition-all select-none col-span-2 md:col-span-1">
+                            Wealth Creation
+                        </button>
+                    </div>
+
+                    <div class="bg-teal-50 border border-teal-100 rounded-2xl p-6 mb-6">
+                        <h4 class="text-teal-950 font-bold mb-2 text-md flex items-center gap-2" id="goal-title">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-teal-900"></i> Child Education Strategy
+                        </h4>
+                        <p class="text-sm text-teal-900/80 m-0 leading-relaxed" id="goal-desc">
+                            A long-term child education fund that is 10-15 years away allows for disciplined equity exposure. Monthly SIPs combined with step-up features ensure your savings pace matches the rising costs of higher education.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="../../contact.html" class="inline-flex items-center gap-2 bg-teal-900 hover:bg-logo-blue text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all shadow-md">
+                            Speak to Wealth Saathi about your goals
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SECTION 8 -->
+                <h2 id="portfolio-restructuring">Portfolio Restructuring: How to Clean Overlap and Underperformance</h2>
+                <p>
+                    Many investors already hold mutual funds but are not sure whether the portfolio is healthy. Some hold too many funds. Some invest in multiple funds with similar stocks. Some keep old funds that no longer match their goals. Some chase recent winners and end up with a portfolio that is aggressive without realising it.
+                </p>
+                <p>
+                    Portfolio restructuring means reviewing the existing portfolio and improving it where required. The aim is not to change funds every month. The aim is to remove unnecessary overlap, reduce unsuitable exposure, align risk with goals and improve portfolio clarity.
+                </p>
+                <p>
+                    A proper portfolio review should check:
+                </p>
+                <ul>
+                    <li>Number of funds in the portfolio</li>
+                    <li>Overlap between fund holdings and categories</li>
+                    <li>Equity, debt and liquid allocation</li>
+                    <li>Risk level of each scheme</li>
+                    <li>Consistency of performance compared with relevant benchmark and category</li>
+                    <li>Expense ratio, exit load and tax impact before making changes</li>
+                    <li>Whether the fund still matches the investor goal</li>
+                </ul>
+                <p>
+                    Portfolio restructuring should be done carefully. Frequent switching can create tax impact, exit load and unnecessary confusion. A review should be data-driven and goal-driven, not panic-driven.
+                </p>
+
+                <!-- PORTFOLIO HEALTH CHECKLIST WIDGET -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md my-12" id="portfolio-checklist">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-logo-orange">
+                            <i data-lucide="activity" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-teal-950 m-0">Is Your Portfolio Overloaded?</h3>
+                            <p class="text-xs text-gray-500 m-0">Check if you suffer from these common portfolio issues:</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">Holding too many funds (15+)</span>
+                        </label>
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">Significant stock overlap</span>
+                        </label>
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">No debt/liquid allocation</span>
+                        </label>
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">No dedicated emergency fund</span>
+                        </label>
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">Random funds, no goal mapping</span>
+                        </label>
+                        <label class="flex gap-3 items-center p-3.5 rounded-xl border border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 text-teal-900 rounded focus:ring-teal-900" />
+                            <span class="text-sm text-teal-950 font-medium">No review schedule setup</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center">
+                        <p class="text-sm text-gray-600 mb-4">
+                            If you checked one or more boxes, your portfolio could benefit from restructuring. Wealth Saathi helps you consolidate and align your funds.
+                        </p>
+                        <a href="../../contact.html" class="inline-flex items-center gap-2 bg-teal-950 text-white font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider hover:bg-teal-900 transition-all shadow-md">
+                            Request Portfolio Review
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SECTION 9 -->
+                <h2 id="retirement-planning">Retirement Planning with Mutual Funds</h2>
+                <p>
+                    Retirement planning is not only about stopping work. It is about creating a corpus that can support future expenses, healthcare needs, inflation and lifestyle goals. For many investors, retirement is the largest financial goal of life because it may need to support 20 to 30 years after active income slows down or stops.
+                </p>
+                <p>
+                    Mutual funds can be used as part of a retirement strategy through a combination of equity-oriented funds for long-term growth and debt/liquid funds for stability and withdrawal planning. The portfolio should gradually become more balanced as the investor moves closer to retirement.
+                </p>
+                <p>
+                    A useful retirement plan should answer:
+                </p>
+                <ul>
+                    <li>What monthly expense is required after retirement?</li>
+                    <li>What inflation rate is realistic?</li>
+                    <li>How many years are left for retirement?</li>
+                    <li>What existing assets are available?</li>
+                    <li>How much monthly SIP or lumpsum is needed?</li>
+                    <li>What withdrawal plan will be used after retirement?</li>
+                </ul>
+                
+                <div class="bg-teal-950 text-white p-8 rounded-3xl my-8 relative overflow-hidden shadow-lg border border-teal-900">
+                    <div class="relative z-10">
+                        <h4 class="font-display text-2xl font-bold mb-2">Plan Your Retirement Corpus with Wealth Saathi</h4>
+                        <p class="text-white/60 text-sm leading-relaxed mb-6">
+                            Retirement projections depend on mathematical assumptions and are not guaranteed. A disciplined plan can help you understand the gap between current savings and future needs.
+                        </p>
+                        <a href="../../contact.html" class="inline-block bg-white text-teal-950 hover:bg-logo-blue hover:text-white text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full transition-all shadow-md">
+                            Start Retirement Planning
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SECTION 10 -->
+                <h2 id="elss-tax">ELSS Tax Saving: Section 80C with Market-Linked Growth Potential</h2>
+                <p>
+                    ELSS, or Equity Linked Savings Scheme, is a tax-saving mutual fund category used by many investors under Section 80C of the Income Tax Act, subject to applicable limits and tax rules. ELSS has equity exposure, so it carries market risk. It also has a lock-in period, which means the money cannot be withdrawn before the lock-in period ends.
+                </p>
+                <p>
+                    ELSS can be useful for investors who want tax-saving potential along with long-term equity participation. However, it should not be selected only for tax saving. The investor should check risk profile, time horizon and overall portfolio allocation. If the investor already has high equity exposure, adding ELSS only for tax benefit may increase risk.
+                </p>
+                <p>
+                    Tax rules can change. Investors should consult a tax professional for personal tax advice and review the latest rules before investing.
+                </p>
+
+                <!-- SECTION 11 -->
+                <h2 id="how-ws-helps">How Wealth Saathi Helps Investors Build a Disciplined Investment Plan</h2>
+                <p>
+                    Wealth Saathi Advisor positions itself around mutual fund planning, SIP and lumpsum investments, portfolio restructuring, goal-based planning, retirement planning and ELSS tax saving. The website also highlights a structured process: discovery and risk profiling, asset allocation strategy, execution, and review and rebalance.
+                </p>
+                <p>
+                    This approach is important because investors do not need only a fund name. They need a complete framework that connects money decisions to life goals. A disciplined advisor or distributor can help investors avoid emotional decisions during market volatility and stay focused on long-term planning.
+                </p>
+                <p>
+                    A simple Wealth Saathi journey can look like this:
+                </p>
+                <ol class="space-y-4 my-6">
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">1</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Discovery</strong>
+                            <span class="text-sm text-gray-500">Understand income, expenses, assets, liabilities, existing investments and goals.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">2</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Risk Profiling</strong>
+                            <span class="text-sm text-gray-500">Understand risk capacity, risk appetite and investment horizon.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">3</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Asset Allocation</strong>
+                            <span class="text-sm text-gray-500">Decide the mix of equity, debt and liquid assets suitable for each goal.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">4</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Scheme Selection</strong>
+                            <span class="text-sm text-gray-500">Shortlist mutual fund schemes based on category, objective, risk, consistency and suitability.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">5</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Execution</strong>
+                            <span class="text-sm text-gray-500">Complete KYC, investment setup and transaction process through appropriate distribution channels.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-teal-900 text-white flex items-center justify-center font-bold text-sm">6</div>
+                        <div>
+                            <strong class="text-teal-950 font-bold block">Review and Rebalance</strong>
+                            <span class="text-sm text-gray-500">Review periodically and adjust if goals, markets or personal situations change.</span>
+                        </div>
+                    </li>
+                </ol>
+
+                <!-- WHATSAPP REVIEW BLOCK -->
+                <div class="bg-emerald-50 border border-emerald-100 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 my-12" id="whatsapp-review">
+                    <div class="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center text-3xl shadow-md flex-shrink-0">
+                        <i data-lucide="message-circle" class="w-8 h-8"></i>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h4 class="font-display text-2xl font-bold text-emerald-950 m-0">WhatsApp Portfolio Review</h4>
+                        <p class="text-sm text-emerald-800 m-0 mt-2 leading-relaxed">
+                            Share your current portfolio screenshot or PDF statement on WhatsApp for a professional, secure assessment. By sharing, you consent to our privacy policy and distribution reviews.
+                        </p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send/?phone=918125293199" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider transition-all flex items-center gap-2 flex-shrink-0 shadow-md">
+                        Share on WhatsApp
+                    </a>
+                </div>
+
+                <!-- SECTION 12 -->
+                <h2 id="common-mistakes">Common Mutual Fund Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Mistake 1: Selecting funds only by last 1-year return.</strong> Short-term performance can be misleading. Always compare with category, benchmark, risk and consistency.</li>
+                    <li><strong>Mistake 2: Investing without a goal.</strong> Without a goal, investors may stop SIPs during market falls or withdraw money too early.</li>
+                    <li><strong>Mistake 3: Holding too many funds.</strong> More funds do not always mean better diversification. Too many overlapping funds can make the portfolio difficult to manage.</li>
+                    <li><strong>Mistake 4: Ignoring risk level.</strong> A high-risk fund may not be suitable for every investor. Always check the Riskometer and scheme documents.</li>
+                    <li><strong>Mistake 5: Expecting guaranteed returns.</strong> Mutual fund returns are market-linked. No advisor, distributor or platform should promise fixed or guaranteed returns from mutual funds.</li>
+                    <li><strong>Mistake 6: Stopping SIP during volatility.</strong> Market corrections are normal. The right action depends on the goal, time horizon and portfolio suitability, not fear.</li>
+                    <li><strong>Mistake 7: Not reviewing the portfolio.</strong> A review does not mean frequent switching. It means checking whether the portfolio is still suitable.</li>
+                </ul>
+
+                <!-- SECTION 13 -->
+                <h2 id="final-checklist">Final Checklist Before Starting Your Mutual Fund Journey</h2>
+                <p>
+                    Before you start or increase your mutual fund investment, use this simple checklist:
+                </p>
+                <ul>
+                    <li>I have defined my goal and time horizon.</li>
+                    <li>I understand my risk profile.</li>
+                    <li>I have checked the Riskometer and scheme related documents.</li>
+                    <li>I am not investing only based on past returns.</li>
+                    <li>I have emergency funds before taking aggressive risk.</li>
+                    <li>I understand SIP returns are not guaranteed.</li>
+                    <li>I know when the portfolio will be reviewed.</li>
+                    <li>I have a clear reason for every fund in my portfolio.</li>
+                </ul>
+                <p>
+                    If you are unsure about any point in this checklist, it may be better to speak with a qualified mutual fund professional before investing. <strong>Wealth Saathi Advisor</strong> can help investors understand their current position, map goals and create a disciplined mutual fund investment plan.
+                </p>
+
+                <div class="text-center my-12">
+                    <a href="../../contact.html" class="inline-flex items-center gap-2 bg-teal-900 hover:bg-logo-blue text-white text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-full transition-all shadow-lg">
+                        Book a Free Consultation
+                    </a>
+                </div>
+
+                <!-- SECTION 14: FAQS -->
+                <h2 id="faqs">Frequently Asked Questions</h2>
+                <div class="space-y-4 my-8" id="faq-accordions">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>Is SIP safe for beginners?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-1" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-1" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            SIP is a disciplined way to invest regularly, but it is not risk-free. The risk depends on the mutual fund scheme category, market conditions and investment horizon. Beginners should start after understanding risk profile and goal suitability.
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>Which is better: SIP or lumpsum?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-2" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-2" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            SIP is suitable for regular monthly investing and reducing timing pressure. Lumpsum may be suitable for surplus money with a long time horizon and proper asset allocation. The right choice depends on investor profile and goal.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>Can mutual funds give guaranteed returns?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-3" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-3" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            No. Mutual fund returns are market-linked and not guaranteed. Investors should read all scheme-related documents carefully and understand the Riskometer before investing.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(4)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>How many mutual funds should I hold?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-4" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-4" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            There is no one fixed number. The portfolio should have enough diversification without unnecessary overlap. The right number depends on goals, investment amount, categories and risk profile.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(5)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>How often should I review my portfolio?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-5" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-5" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            A mutual fund portfolio can usually be reviewed periodically, such as once or twice a year, or when there is a major change in goal, income, risk profile or market environment. Frequent switching should be avoided unless there is a clear reason.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(6)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>What is ELSS?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-6" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-6" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            ELSS is an equity-linked tax-saving mutual fund category used under Section 80C, subject to applicable tax rules. It carries market risk and has a lock-in period.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                        <button onclick="toggleFaq(7)" class="w-full text-left p-6 font-semibold text-teal-950 flex justify-between items-center hover:bg-gray-50 transition-colors select-none">
+                            <span>What does an AMFI registered mutual fund distributor do?</span>
+                            <i data-lucide="chevron-down" id="faq-icon-7" class="w-5 h-5 text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-ans-7" class="hidden p-6 pt-0 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">
+                            An AMFI registered mutual fund distributor helps investors with mutual fund transactions and distribution-related support. Investors should still understand scheme risks, suitability and disclosures before investing.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPLIANCE BOX -->
+                <div class="bg-gray-100 border border-gray-200 rounded-2xl p-6 my-10">
+                    <h5 class="text-xs font-mono font-bold tracking-widest text-gray-400 uppercase mb-3">Compliance Disclaimer</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed m-0">
+                        Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. This article is for educational and informational purposes only and should not be treated as investment, tax or legal advice. Past performance is not a guarantee of future results. Investment decisions should be based on the investor risk profile, time horizon, financial goals and applicable regulations. Wealth Saathi Advisor is listed on its website as an AMFI registered mutual fund distributor with ARN: 290997.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="bg-black pt-20 pb-8 border-t-[6px]"
+        style="border-image: linear-gradient(to right, #e94b83, #ff8a4c, #ffd54f, #81c784, #4ea8de) 1;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <div class="logo-wrap mb-8">
+                        <img src="https://drive.google.com/thumbnail?id=1MTswliuL1pnjv-uhqbIuar86W0d5hvZM&sz=w600" alt="Wealth Saathi Advisor Logo" class="h-[45px] md:h-[65px] w-auto object-contain drop-shadow-md transition-transform hover:scale-105" />
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed mb-6">
+                        Guided by the principles of Investment Strategy (IS), we construct diversified mutual fund portfolios to 
+                        supercharge your family's wealth.
+                    </p>
+
+                    <!-- Logo Color Dots -->
+                    <div class="flex gap-2">
+                        <span class="w-3 h-3 rounded-full bg-logo-pink"></span>
+                        <span class="w-3 h-3 rounded-full bg-logo-orange"></span>
+                        <span class="w-3 h-3 rounded-full bg-logo-yellow"></span>
+                        <span class="w-3 h-3 rounded-full bg-logo-green"></span>
+                        <span class="w-3 h-3 rounded-full bg-logo-blue"></span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../../index.html#philosophy"
+                                class="text-white/40 hover:text-logo-blue text-sm transition-colors">Our Philosophy</a>
+                        </li>
+                        <li><a href="../../index.html#services"
+                                class="text-white/40 hover:text-logo-blue text-sm transition-colors">Wealth Services</a>
+                        </li>
+                        <li><a href="../../index.html#calculator"
+                                class="text-white/40 hover:text-logo-blue text-sm transition-colors">SIP Calculator</a>
+                        </li>
+                        <li><a href="../../index.html#process" class="text-white/40 hover:text-logo-blue text-sm transition-colors">Our
+                                Process</a></li>
+                        <li><a href="../index.html"
+                                class="text-white/40 hover:text-logo-blue text-sm transition-colors font-semibold text-logo-blue">Blog</a>
+                        </li>
+                        <li><a href="../../index.html#contact"
+                                class="text-white/40 hover:text-logo-blue text-sm transition-colors">Contact Advisor</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><span class="text-white/40 text-sm">Mutual Funds (SIP/Lumpsum)</span></li>
+                        <li><span class="text-white/40 text-sm">Portfolio Restructuring</span></li>
+                        <li><span class="text-white/40 text-sm">HNI Wealth Advisory</span></li>
+                        <li><span class="text-white/40 text-sm">Retirement Planning</span></li>
+                        <li><span class="text-white/40 text-sm">Tax Saving Investments (ELSS)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="user" class="w-4 h-4 text-logo-green mt-0.5 flex-shrink-0"></i>
+                            <span class="text-white/70 text-sm font-semibold">T. Sreenivasula Gupta</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="file-check" class="w-4 h-4 text-logo-green mt-0.5 flex-shrink-0"></i>
+                            <span class="text-white/40 text-sm font-mono">ARN: 290997</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-logo-green flex-shrink-0"></i>
+                            <a href="tel:+918125293199"
+                                class="text-white/40 hover:text-logo-green text-sm transition-colors font-mono">
+                                +91 81252 93199
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-logo-green flex-shrink-0"></i>
+                            <a href="https://api.whatsapp.com/send/?phone=918125293199" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-white/40 hover:text-logo-green text-sm transition-colors">
+                                WhatsApp Connect
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col items-center justify-center gap-4 text-center">
+                <p class="text-white/50 text-xs max-w-4xl leading-relaxed">
+                    <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks, read all scheme
+                    related documents carefully before investing. The calculator and content provided on this website
+                    are for educational and illustrative purposes only and do not constitute guaranteed financial
+                    returns. Past performance is not necessarily an indicator of future results.
+                </p>
+                <p class="text-white/30 text-sm mt-4">&copy; 2026 Wealth Saathi Advisor. All rights reserved. Designed
+                    for premium wealth creation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    SCRIPTS
+    ============================================================ -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+        lucide.createIcons();
+
+        // ── FAQ Accordion Logic
+        function toggleFaq(id) {
+            const ans = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // ── Goal Planner Selection Logic
+        const goals = {
+            edu: {
+                title: 'Child Education Strategy',
+                icon: 'graduation-cap',
+                desc: 'A long-term child education fund that is 10-15 years away allows for disciplined equity exposure. Monthly SIPs combined with step-up features ensure your savings pace matches the rising costs of higher education.'
+            },
+            ret: {
+                title: 'Retirement Strategy',
+                icon: 'palmtree',
+                desc: 'Building a robust retirement corpus requires high asset allocation discipline. Combined equity portfolios for growth and dynamic systematic withdrawal planning (SWP) in retirement help ensure a stable monthly income.'
+            },
+            home: {
+                title: 'Home Purchase Strategy',
+                icon: 'home',
+                desc: 'For home purchasing timelines (typically 3 to 5 years), a hybrid asset allocation model balances volatility and wealth creation. A portion stays in debt to lock in stability while equity speeds growth.'
+            },
+            tax: {
+                title: 'ELSS Tax Saving Strategy',
+                icon: 'percent',
+                desc: 'Equity Linked Savings Scheme (ELSS) mutual funds qualify for deductions under Section 80C. ELSS carries market risk and a mandatory 3-year lock-in, aligning tax savings with equity compounding.'
+            },
+            wealth: {
+                title: 'Long-term Wealth Creation',
+                icon: 'trending-up',
+                desc: 'Aiming for general compounding over 10+ years calls for multi-cap and index mutual funds. Rupee cost averaging through SIPs mitigates market entry timing issues while maximizing returns.'
+            }
+        };
+
+        function selectGoal(key) {
+            const goal = goals[key];
+            document.getElementById('goal-title').innerHTML = `<i data-lucide="${goal.icon}" class="w-4 h-4 text-teal-900"></i> ${goal.title}`;
+            document.getElementById('goal-desc').textContent = goal.desc;
+            
+            // Re-initialize lucide icons for dynamic content
+            lucide.createIcons();
+
+            // Toggle active classes for buttons
+            const buttons = ['edu', 'ret', 'home', 'tax', 'wealth'];
+            buttons.forEach(btn => {
+                const el = document.getElementById(`btn-goal-${btn}`);
+                if (btn === key) {
+                    el.className = 'px-3 py-3 rounded-2xl border border-teal-900 bg-teal-900 text-white text-xs font-semibold text-center transition-all select-none';
+                } else {
+                    el.className = 'px-3 py-3 rounded-2xl border border-gray-200 bg-white text-gray-600 hover:border-teal-900 text-xs font-semibold text-center transition-all select-none';
+                }
+            });
+        }
+
+        // ── SIP Calculator Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const sipInput = document.getElementById('calc-sip');
+            const rateInput = document.getElementById('calc-rate');
+            const timeInput = document.getElementById('calc-time');
+
+            const dispSip = document.getElementById('disp-sip');
+            const dispRate = document.getElementById('disp-rate');
+            const dispTime = document.getElementById('disp-time');
+
+            const outTotal = document.getElementById('calc-total');
+            const outInvested = document.getElementById('calc-invested');
+            const outReturns = document.getElementById('calc-returns');
+
+            const barInvested = document.getElementById('bar-invested');
+            const barReturns = document.getElementById('bar-returns');
+
+            function formatRupee(number) {
+                if (number >= 10000000) return (number / 10000000).toFixed(2) + 'Cr';
+                if (number >= 100000) return (number / 100000).toFixed(2) + 'L';
+                return new Intl.NumberFormat('en-IN').format(Math.round(number));
+            }
+
+            function calculateSIP() {
+                const P = parseFloat(sipInput.value);
+                const r = parseFloat(rateInput.value);
+                const n = parseFloat(timeInput.value);
+
+                // Update Displays
+                dispSip.textContent = new Intl.NumberFormat('en-IN').format(P);
+                dispRate.textContent = r;
+                dispTime.textContent = n;
+
+                // Math
+                const i = r / 12 / 100;
+                const months = n * 12;
+
+                const totalInvested = P * months;
+                const futureValue = P * ((Math.pow(1 + i, months) - 1) / i) * (1 + i);
+                const estReturns = futureValue - totalInvested;
+
+                // Output
+                outTotal.textContent = '₹' + formatRupee(futureValue);
+                outInvested.textContent = '₹' + formatRupee(totalInvested);
+                outReturns.textContent = '₹' + formatRupee(estReturns);
+
+                // Bars
+                const investedPercent = (totalInvested / futureValue) * 100;
+                const returnsPercent = (estReturns / futureValue) * 100;
+
+                barInvested.style.width = Math.max(investedPercent, 10) + '%';
+                barReturns.style.width = Math.max(returnsPercent, 10) + '%';
+            }
+
+            sipInput.addEventListener('input', calculateSIP);
+            rateInput.addEventListener('input', calculateSIP);
+            timeInput.addEventListener('input', calculateSIP);
+
+            calculateSIP(); // init
+        });
+    </script>
+</body>
+
+</html>
